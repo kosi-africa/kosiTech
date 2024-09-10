@@ -15,7 +15,7 @@ export default function SolutionSection() {
         </p>
         </div>
         <div className=" max-w-6xl mx-auto mt-20">
-            <div className="flex gap-8 justify-center">
+            <div className="flex flex-wrap gap-8 justify-center">
                 <div className="border text-center px-4 py-20 space-y-4 ">
                     <p className="text-xl font-semibold">For Clients</p>
                     <p className="">Access to readily available, highly skilled, cost-effective tech talent</p>

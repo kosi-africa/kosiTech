@@ -9,7 +9,7 @@ export default function ImpactSection() {
           {" "}
           <span className="text-green-400 uppercase">&#8226;</span>Impact
         </h2>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row gap-8 justify-between">
           <div className="space-y-8">
             <p className="text-5xl leading-[3.5rem]">
               {" "}

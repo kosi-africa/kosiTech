@@ -9,7 +9,7 @@ export default function ProgressSection() {
           <span className="text-red-800 uppercase">&#8226;</span>Progress
         </h2>
       </div>
-      <div className="max-w-5xl mx-auto flex justify-between gap-4">
+      <div className="max-w-5xl mx-auto flex flex-wrap justify-center md:justify-between gap-4">
         <div className=" text-center">
           <p className="text-5xl font-semibold text-red-800">35+</p>
           <p className="w-64">
