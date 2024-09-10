@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
+import AvailableSection from "@/components/homePage/AvailableSection";
+import HeroSection from "@/components/homePage/HeroSection";
+
 
 
 export default function Home() {
   return (
-    <div className="text-center">
-      Home page
-      <Button>
-        Get Started
-      </Button>
-    </div>
+    <main className="container mx-auto ">
+      <HeroSection/>
+      <AvailableSection/>
+    </main>
   );
 }
