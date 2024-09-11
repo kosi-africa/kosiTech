@@ -1,16 +1,16 @@
 export default function ProblemSection() {
   return (
-    <section className="w-full h-full px-4">
+    <section className="w-full h-full px-4 md:px-12 mt-28">
       <div className="max-w-7xl mx-auto">
-        <h2 className="uppercase text-2xl mb-8">
+        <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
           <span className="text-red-800 uppercase">&#8226;</span>The Problem
         </h2>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-4  ">
-          <div className="w-11/12 mx-auto md:mr-auto">
-            <p className="text-5xl leading-[3.5rem]">
-              They estimated skilled talent <br /> emigration from Kenya at an{" "}
-              <br /> astounding{" "}
+          <div className="w-full mx-auto md:mr-auto">
+            <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
+              They estimated skilled talent <br  className="hidden md:block"/> emigration from Kenya at an{" "}
+              <br className="hidden md:block" /> astounding{" "}
               <span className="bg-red-800 text-white px-1">35.9%</span>
             </p>
           </div>

@@ -7,18 +7,19 @@ import ServicesSection from "@/components/aboutUsPage/ServicesSection";
 import SolutionSection from "@/components/aboutUsPage/SolutionSection";
 import ReadyCTASection from "@/components/homePage/ReadyCTASection";
 
-
 export default function page() {
   return (
-    <main className="container mx-auto">
-      <HeroSection/>
-      <ProblemSection/>
-      <SolutionSection/>
-      <ServicesSection/>
-      <ImpactSection/>
-      <ProgressSection/>
-      <PartnersSection/>
-      <ReadyCTASection/>
+    <main className="">
+      <HeroSection />
+      <section className="container mx-auto ">
+        <ProblemSection />
+        <SolutionSection />
+        <ServicesSection />
+        <ImpactSection />
+        <ProgressSection />
+      </section>
+      <PartnersSection />
+      <ReadyCTASection />
     </main>
-  )
+  );
 }
