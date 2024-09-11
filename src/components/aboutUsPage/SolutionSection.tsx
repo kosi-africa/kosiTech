@@ -1,21 +1,21 @@
 export default function SolutionSection() {
   return (
-    <section className="h-full w-full px-4">
-      <div className="max-w-4xl mx-auto grid place-content-center mt-36">
-        <h2 className="uppercase text-2xl mb-8">
+    <section className="h-full w-full px-4 mt-28">
+      <div className="max-w-4xl mx-auto grid place-content-center">
+        <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
           <span className="text-green-400 uppercase">&#8226;</span>Solution
         </h2>
-        <p className="text-5xl leading-[3.5rem]">
+        <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
-          We recognized the Global demand for tech <br />
+          We recognized the Global demand for tech <br  className="hidden md:block" />
           talent and created <span className="bg-green-400 px-1">KosiTech</span>
-          , a tech hub <br /> to act as a bridge between African talent <br />{" "}
+          , a tech hub <br  className="hidden md:block" /> to act as a bridge between African talent <br  className="hidden md:block" />{" "}
           and global clients
         </p>
         </div>
         <div className=" max-w-6xl mx-auto mt-20">
-            <div className="flex flex-wrap gap-8 justify-center">
+            <div className="flex flex-col md:flex-row gap-8 justify-center">
                 <div className="border text-center px-4 py-20 space-y-4 ">
                     <p className="text-xl font-semibold">For Clients</p>
                     <p className="">Access to readily available, highly skilled, cost-effective tech talent</p>
