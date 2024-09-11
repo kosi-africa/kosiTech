@@ -2,8 +2,12 @@
 import { CldImage } from "next-cloudinary";
 import React from "react";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export default function ReadyCTASection() {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <section className="h-[80vh] w-full grid place-content-center relative">
       <CldImage
@@ -14,8 +18,20 @@ export default function ReadyCTASection() {
         alt="ready cta bg img"
         className="object-cover h-screen w-screen absolute top-0 left-0 -z-20"
       />
-      <div className="absolute top-0 left-0 h-screen w-screen bg-gradient-to-b from-slate-100 via-transparent to-slate-100 -z-10"></div>
-      <h1 className="text-center text-pretty uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem]  mt-28 z-0">
+      <div
+        className={clsx(
+          "absolute top-0 left-0 h-screen w-screen -z-10",
+          pathname == "/our-work"
+            ? "bg-gradient-to-b from-black/95  via-black/80 via-60% to-black/95 text-white"
+            : "bg-gradient-to-b from-slate-100 via-transparent to-slate-100"
+        )}
+      ></div>
+      <h1
+        className={clsx(
+          "text-center text-pretty uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem]  mt-28 z-0",
+          pathname == "/our-work" ? "text-white" : "text-black"
+        )}
+      >
         Ready to elevate <br /> your brand with <br /> KOSI TECH?
       </h1>
       <Button className="bg-red-600 hover:bg-red-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0">

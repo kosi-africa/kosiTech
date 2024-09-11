@@ -5,9 +5,12 @@ import ServicesSection from "@/components/ourWorkPage/ServicesSection";
 
 export default function page() {
   return (
-    <main className="container mx-auto ">
+    <main className="">
         <HeroSection/>
+        {/* <section className="container mx-auto"> */}
+        <section className="bg-black">
         <ServicesSection/>
+        </section>
         <ReadyCTASection/>
     </main>
   )
