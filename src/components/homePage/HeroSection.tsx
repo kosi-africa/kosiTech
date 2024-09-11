@@ -9,13 +9,15 @@ export default function HeroSection() {
         src="kosi-tech/about-us-hero-section/home-hero-bg.jpg_t8la6e"
         height="900"
         width="1400"
+        sizes="100vw"
+        priority
         alt="kosi tech home hero bg"
-        className="object-cover h-full w-full absolute top-0 left-0  -z-20 "
+        className="object-cover h-screen w-screen absolute top-0 left-0  -z-20 "
       />
       <div className="absolute top-0 left-0 -z-10 h-screen w-screen bg-gradient-to-b  from-slate-100 via-transparent to-slate-100"></div>
-      <h1 className="text-center uppercase font-bold text-6xl leading-[4.5rem]  z-0">
+      <h1 className="text-center text-pretty uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem]  z-0">
         We are a <span className="bg-green-500 px-2">talent solution</span> to{" "}
-        <br /> the global tech demand
+        <br className="hidden md:block"/> the global tech demand
       </h1>
     </section>
   );

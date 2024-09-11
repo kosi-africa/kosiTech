@@ -7,14 +7,14 @@ export default function ProjectShowCaseSection() {
   return (
     <section className="h-full w-full px-4 ">
       <div className="max-w-4xl mx-auto grid place-content-center mt-28">
-        <h2 className="uppercase text-2xl mb-8">
+        <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
           <span className="text-green-400 uppercase">&#8226;</span>Project
           Showcase
         </h2>
-        <p className="text-5xl leading-[3.5rem]">
+        <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
-          Unlock your brand potential and drive <br />
+          Unlock your brand potential and drive <br className="hidden md:block" />
           innovation with our{" "}
           <span className="bg-green-400 px-1">expert solutions</span>
         </p>
