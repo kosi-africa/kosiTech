@@ -3,15 +3,15 @@ import HeroSection from "@/components/homePage/HeroSection";
 import ProjectShowCaseSection from "@/components/homePage/ProjectShowCaseSection";
 import ReadyCTASection from "@/components/homePage/ReadyCTASection";
 
-
-
 export default function Home() {
   return (
-    <main className="container mx-auto ">
-      <HeroSection/>
-      <AvailableSection/>
-      <ProjectShowCaseSection/>
-      <ReadyCTASection/>
+    <main className="">
+      <HeroSection />
+      <section className="container mx-auto ">
+        <AvailableSection />
+        <ProjectShowCaseSection />
+      </section>
+      <ReadyCTASection />
     </main>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { servicesCard } from "@/collections/ourWorkServices";
-import { projects } from "@/collections/projectShowCase";
 import { CldImage } from "next-cloudinary";
 
 export default function ServicesSection() {
