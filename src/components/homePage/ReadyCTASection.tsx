@@ -7,7 +7,6 @@ import clsx from "clsx";
 
 export default function ReadyCTASection() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <section className="h-[80vh] w-full grid place-content-center relative">
       <CldImage
