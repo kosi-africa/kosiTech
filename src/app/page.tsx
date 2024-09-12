@@ -7,10 +7,8 @@ export default function Home() {
   return (
     <main className="">
       <HeroSection />
-      <section className="container mx-auto ">
-        <AvailableSection />
-        <ProjectShowCaseSection />
-      </section>
+      <AvailableSection />
+      <ProjectShowCaseSection />
       <ReadyCTASection />
     </main>
   );

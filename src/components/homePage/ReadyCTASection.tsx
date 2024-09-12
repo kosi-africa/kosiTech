@@ -8,7 +8,7 @@ import clsx from "clsx";
 export default function ReadyCTASection() {
   const pathname = usePathname();
   return (
-    <section className="h-[80vh] w-full grid place-content-center relative">
+    <section className="h-[100vh] w-full grid place-content-center relative">
       <CldImage
         src="kosi-tech/ReadyCTASection/readyCtaBg_ryilh6"
         height="900"
