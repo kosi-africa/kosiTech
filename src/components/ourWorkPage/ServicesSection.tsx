@@ -22,7 +22,7 @@ export default function ServicesSection() {
         {servicesCard.map((service) => (
           <div
             key={service.id}
-            className="flex flex-col md:flex-row gap-8 py-4 px-8 justify-between items-center  bg-gray-700 text-white"
+            className="flex flex-col md:flex-row gap-8 py-4 px-8 justify-between items-center  bg-gray-700 text-white sticky top-0"
           >
             <div className="flex flex-col w-full md:w-5/12">
               <p className="text-lg">{service.number}.</p>
