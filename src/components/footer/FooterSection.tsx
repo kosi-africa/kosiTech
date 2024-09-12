@@ -36,11 +36,13 @@ export default function FooterSection() {
 
         <section className="flex flex-wrap justify-center md:justify-between items-center">
           <div className="c">
-            <Button className="bg-black hover:bg-gray-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0">
+            <Button asChild className="bg-black hover:bg-gray-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0">
+            <Link href="/contact-us">
               <span className="bg-white text-black px-1 mx-1 rounded-md">
                 &#8594;
               </span>
               Get Started
+              </Link>
             </Button>
           </div>
           <div className="flex flex-wrap gap-16 justify-center md:justify-between items-center">
