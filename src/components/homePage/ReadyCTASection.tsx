@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function ReadyCTASection() {
   const pathname = usePathname();
@@ -33,11 +34,16 @@ export default function ReadyCTASection() {
       >
         Ready to elevate <br /> your brand with <br /> KOSI TECH?
       </h1>
-      <Button className="bg-red-600 hover:bg-red-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0">
-        <span className="bg-white text-red-600 px-1 mx-1 rounded-md">
-          &#8594;
-        </span>
-        Get Started
+      <Button
+        asChild
+        className="bg-red-600 hover:bg-red-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0"
+      >
+        <Link href="/contact-us">
+          <span className="bg-white text-red-600 px-1 mx-1 rounded-md">
+            &#8594;
+          </span>
+          Get Started
+        </Link>
       </Button>
     </section>
   );
