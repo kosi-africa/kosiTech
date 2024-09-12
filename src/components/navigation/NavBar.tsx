@@ -5,6 +5,11 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "../ui/navigation-menu";
 
 export default function NavBar() {
   const pathName = usePathname();
@@ -26,35 +31,34 @@ export default function NavBar() {
         <div className="flex gap-4 justify-between items-center">
           {/* left nav bar  */}
           <div className="flex gap-4 justify-between items-center">
-            <div className="">
-              <Link href="/">
-                <CldImage
-                  src={
-                    pathName == "/contact-us"
-                      ? "kosi-tech/logos/Kosi_tech_nav_logo_2_u8zwsu"
-                      : "kosi-tech/logos/kosiTech_nav_logo_ytqvv6"
-                  }
-                  height="150"
-                  width="150"
-                  sizes="100vw"
-                  priority
-                  alt="KosiTech logo"
-                  className="object-cover"
-                />
-              </Link>
-            </div>
-            <div className="flex gap-4 justify-between items-center">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.id}
-                  href={link.linkRef}
-                  className="text-sm font-medium"
-                >
-                  {link.linkName}
-                </Link>
-              ))}
-            </div>
+              <NavigationMenu>
+                <NavigationMenuList className="flex gap-4 justify-between items-center text-sm">
+                  <NavigationMenuItem>
+                    <Link href="/">
+                      <CldImage
+                        src={
+                          pathName == "/contact-us"
+                            ? "kosi-tech/logos/Kosi_tech_nav_logo_2_u8zwsu"
+                            : "kosi-tech/logos/kosiTech_nav_logo_ytqvv6"
+                        }
+                        height="150"
+                        width="150"
+                        sizes="100vw"
+                        priority
+                        alt="KosiTech logo"
+                        className="object-cover"
+                      />
+                    </Link>
+                  </NavigationMenuItem>
+                  {navLinks.map((navLink) => (
+                    <NavigationMenuItem key={navLink.id}>
+                      <Link href={navLink.linkRef}>{navLink.linkName}</Link>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
           </div>
+
           {/* right side bar */}
           <div className="">
             <Link href="/contact-us">
