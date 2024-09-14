@@ -4,6 +4,7 @@ import "./globals.css";
 import FooterSection from "@/components/footer/FooterSection";
 import NavBar from "@/components/navigation/NavBar";
 import { getCldOgImageUrl } from "next-cloudinary";
+import { Toaster } from "sonner";
 
 
 const geistSans = localFont({
@@ -46,6 +47,7 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <Toaster position='top-right'/>
         <FooterSection />
       </body>
     </html>
