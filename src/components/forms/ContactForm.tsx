@@ -32,6 +32,7 @@ const contactFormSchema = z.object({
   message: z.string().min(2,{message:"Message should be at least 2 characters long"}),
 });
 
+
 export default function ContactForm() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -43,8 +44,9 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof contactFormSchema>) {
-    toast('Processing your data...')
+  // function onSubmit(data: z.infer<typeof contactFormSchema>) {
+  function onSubmit() {
+    toast.info('Processing your data...')
     form.reset()
   }
 
