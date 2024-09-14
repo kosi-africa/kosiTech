@@ -36,7 +36,7 @@ export default function ReadyCTASection() {
       </h1>
       <Button
         asChild
-        className="bg-red-600 hover:bg-red-700 hover:shadow-xl text-white w-32 mx-auto my-8 z-0"
+        className="bg-red-600 hover:bg-red-700 text-white w-32 mx-auto my-8 z-0 transition ease-in hover:scale-105"
       >
         <Link href="/contact-us">
           <span className="bg-white text-red-600 px-1 mx-1 rounded-md">
