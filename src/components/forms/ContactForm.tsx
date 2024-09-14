@@ -154,7 +154,7 @@ export default function ContactForm() {
             </Button>
         </form>
       </Form>
-      <div className="flex justify-end items-center w-full -mt-10">
+      <div className="flex justify-end items-center w-full  mt-6 -ml-16 md:-mt-10 md:ml-0">
         <div className="flex justify-center items-center">
             <p className="px-2">Or</p>
             <Button
