@@ -65,7 +65,7 @@ export default function NavBar() {
               <Button
                 variant="outline"
                 className={clsx(
-                  "bg-white border border-red-600  hover:bg-slate-200 hover:shadow-xl text-black w-32 mx-auto my-8 z-0",
+                  "bg-white border border-red-600 px-2  hover:bg-slate-200 text-black w-full md:w-32 mx-auto my-8 z-0 transition ease-in hover:scale-105",
                   pathName == "/contact-us" ? "hidden" : "block"
                 )}
               >

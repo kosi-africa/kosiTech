@@ -27,7 +27,7 @@ export default function AvailableSection() {
           {workCards.map((work) => (
             <div
               key={work.id}
-              className="rounded-md bg-gradient-to-b from-slate-600 to-slate-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
+              className="rounded-xl bg-gradient-to-b from-slate-600 to-slate-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
             >
               <CldImage
                 src={work.imageRef}
