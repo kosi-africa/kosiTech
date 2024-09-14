@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/forms/ContactForm";
 
 export default function page() {
   return (
@@ -26,62 +26,7 @@ export default function page() {
           </div>
           {/* form div */}
           <div className="col-span-12 lg:col-span-6 space-y-8">
-            <div className="flex flex-col lg:flex-row gap-20 justify-between items-center">
-              <div className="w-full">
-                <p className=" font-light text-gray-300 text-sm">Name</p>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  className="border-b border-slate-200 bg-transparent px-4 py-4 w-full"
-                  placeholder=" Enter your Name"
-                />
-              </div>
-              <div className="w-full">
-                <p className=" font-light text-gray-300 text-sm">Email</p>
-                <input
-                  type="email"
-                  name=""
-                  id=""
-                  className="border-b border-slate-200 bg-transparent px-4 py-4 w-full"
-                  placeholder=" Enter your Email"
-                />
-              </div>
-            </div>
-            <div className="w-full">
-              <p className=" font-light text-gray-300 text-sm">Project</p>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="border-b border-slate-200 bg-transparent px-4 py-4 w-full"
-                placeholder=" Select a project type*"
-              />
-            </div>
-            <div className="w-full">
-              <p className=" font-light text-gray-300 text-sm">Message</p>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="border-b border-slate-200 bg-transparent px-4 py-4 w-full"
-                placeholder=" Your message..."
-              />
-            </div>
-            <div className="flex flex-col lg:flex-row gap-8 justify-between items-center">
-              <Button className="bg-white text-black hover:bg-slate-200">
-                Submit Request
-              </Button>
-              <div className=" ">
-                <span className="px-4 text-slate-400">Or</span>
-                <Button
-                  variant="ghost"
-                  className=" border text-white hover:bg-slate-200"
-                >
-                  Book a Meeting
-                </Button>
-              </div>
-            </div>
+            <ContactForm/>
           </div>
         </div>
       </section>
