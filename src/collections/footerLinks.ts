@@ -14,9 +14,5 @@ export const links=[
         name:'Services',
         linkRef:'/our-work',
     },
-    {
-        id:4,
-        name:'License',
-        linkRef:'#',
-    },
+    
 ]
