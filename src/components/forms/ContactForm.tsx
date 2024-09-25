@@ -22,16 +22,18 @@ import {
 } from "../ui/select";
 import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
+import { insertContactInformation } from "@/actions/ContactInformationAction";
 
 const contactFormSchema = z.object({
   name: z
     .string()
     .min(2, { message: "Name should be at least 2 characters long" }),
-  email: z.string().email({message:'Please enter a valid email'}),
+  email: z.string().email({ message: "Please enter a valid email" }),
   project: z.string(),
-  message: z.string().min(2,{message:"Message should be at least 2 characters long"}),
+  message: z
+    .string()
+    .min(2, { message: "Message should be at least 2 characters long" }),
 });
-
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -44,10 +46,12 @@ export default function ContactForm() {
     },
   });
 
-  // function onSubmit(data: z.infer<typeof contactFormSchema>) {
-  function onSubmit() {
-    toast.info('Processing your data...')
-    form.reset()
+  async function onSubmit(contactInforData: z.infer<typeof contactFormSchema>) {
+    const dbResponse = await insertContactInformation(contactInforData);
+    if (dbResponse) {
+      toast.success("Success, details have been submit");
+      form.reset();
+    } else toast.error("Error, Please try again later");
   }
 
   return (
@@ -102,12 +106,12 @@ export default function ContactForm() {
                 <FormLabel>Project</FormLabel>
                 <Select
                   onValueChange={field.onChange}
-                  defaultValue={field.value}
+                  // defaultValue={field.value}
                   required
                 >
                   <FormControl>
                     <SelectTrigger className="text-white bg-black">
-                      <SelectValue placeholder="Select a project type text "  />
+                      <SelectValue placeholder="Select a project type text " />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -145,27 +149,27 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
-          
-            <Button
-              type="submit"
-              className="bg-white text-black hover:bg-slate-200 transition ease-in hover:scale-105 mt-4"
-            >
-              Submit Request
-            </Button>
+
+          <Button
+            type="submit"
+            className="bg-white text-black hover:bg-slate-200 transition ease-in hover:scale-105 mt-4"
+            disabled={form.formState.isSubmitting}
+          >
+            {form.formState.isSubmitting ? "Processing..." : "Submit Request"}
+          </Button>
         </form>
       </Form>
-      <div className="flex justify-end items-center w-full  mt-6 -ml-16 md:-mt-10 md:ml-0">
+      <div className="flex justify-end items-center w-full  -mt-10 -ml-2 md:-mt-10 md:ml-0">
         <div className="flex justify-center items-center">
-            <p className="px-2">Or</p>
-            <Button
-              variant="ghost"
-              className=" border text-white hover:bg-slate-200 transition easein hover:scale-105 "
-            >
-              Book a Meeting
-            </Button>
-
+          <p className="px-2">Or</p>
+          <Button
+            variant="ghost"
+            className=" border text-white hover:bg-slate-200 transition easein hover:scale-105 "
+            disabled
+          >
+            Book a Meeting
+          </Button>
         </div>
-
       </div>
     </section>
   );

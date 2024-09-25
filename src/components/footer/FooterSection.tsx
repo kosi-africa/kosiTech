@@ -25,7 +25,7 @@ export default function FooterSection() {
             </p>
           </div>
           {/* links */}
-          <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-20 my-8">
+          <div className="flex flex-wrap md:flex-row justify-center md:justify-between gap-4 md:gap-20 my-8">
             {links.map((link) => (
               <p key={link.id} className="text-sm">
                 <Link href={link.linkRef}>{link.name}</Link>
