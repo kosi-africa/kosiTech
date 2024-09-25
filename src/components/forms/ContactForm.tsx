@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   async function onSubmit(contactInforData: z.infer<typeof contactFormSchema>) {
     const dbResponse = await insertContactInformation(contactInforData);
-    if (dbResponse) {
+    if (dbResponse.length>0) {
       toast.success("Success, details have been submit");
       form.reset();
     } else toast.error("Error, Please try again later");
