@@ -16,7 +16,7 @@ export default function AvailableSection() {
           <p className=" text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
             {" "}
             We blend{" "}
-            <span className="bg-amber-400 px-1">creativity with purpose,</span>
+            <span className="bg-amber-400 text-white px-1">creativity with purpose,</span>
             creating visuals that are as functional as they are
             <br className="hidden lg:block" /> beautiful, ensuring that they
             contribute to
@@ -35,7 +35,7 @@ export default function AvailableSection() {
                 width="200"
                 sizes="100vw"
                 alt={work.title}
-                className="mx-auto"
+                className="object-cover mx-auto h-40 w-40"
               />
               <h3 className="text-xl font-medium">{work.title}</h3>
               <p className="">{work.description}</p>
