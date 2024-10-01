@@ -12,7 +12,8 @@ export default function ImpactSection() {
           {" "}
           <span className="text-green-400 uppercase">&#8226;</span>Impact
         </h2>
-        <div className="flex flex-col md:flex-row gap-8 justify-between">
+        {/* <div className="flex flex-col md:flex-row gap-8 justify-between"> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center">
           <div className="space-y-8">
             <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
               {" "}
@@ -68,13 +69,13 @@ export default function ImpactSection() {
             <div className="c"></div>
           </div>
           {/* african image */}
-          <div className="c">
+          <div className="">
             <CldImage
               src="kosi-tech/about-us-hero-section/Africa_map_v6h7us"
               height="400"
               width="700"
               alt="africa kenya map"
-              className="object-cover"
+              className="object-cover h-full w-full"
             />
           </div>
         </div>

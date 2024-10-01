@@ -17,7 +17,7 @@ export default function ProjectShowCaseSection() {
             {" "}
             Unlock your brand potential and drive <br className="hidden md:block" />
             innovation with our{" "}
-            <span className="bg-green-400 px-1">expert solutions</span>
+            <span className="bg-green-400 text-white px-1">expert solutions</span>
           </p>
         </div>
         <div className="grid gap-1 mt-20">

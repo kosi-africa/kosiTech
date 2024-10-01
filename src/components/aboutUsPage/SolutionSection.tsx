@@ -9,7 +9,7 @@ export default function SolutionSection() {
         <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
           We recognized the Global demand for tech <br  className="hidden md:block" />
-          talent and created <span className="bg-green-400 px-1">KosiTech</span>
+          talent and created <span className="bg-green-400 text-white px-1">KosiTech</span>
           , a tech hub <br  className="hidden md:block" /> to act as a bridge between African talent <br  className="hidden md:block" />{" "}
           and global clients
         </p>
