@@ -14,7 +14,7 @@ export default function heroSection() {
         className="object-cover absolute h-screen w-screen top-0 left-0 -z-20"
         />
         <div className="absolute top-0 left-0 -z-10 h-screen w-screen bg-gradient-to-b  from-slate-100 via-transparent to-slate-100"></div>
-      <h1 className="text-center uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem]  z-0">
+      <h1 className="text-center uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem] -mt-40 px-4 z-0">
        We recognized a gap between <br className="hidden md:block"/>
        <span className="bg-yellow-500 text-white px-2">African Innovators</span> and{" "}
         <br className="hidden md:block"/> global opportunities

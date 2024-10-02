@@ -32,7 +32,7 @@ export default function ProgressSection() {
       <div className="text-center grid place-content-center mt-20">
         <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
-          <span className="bg-red-800 text-white px-1">Future milestones: </span>
+          <span className="bg-red-800 text-white px-1 mr-1">Future milestones: </span> 
           Expand talent, <br className="hidden md:block"/>
           increase client base, launch <br className="hidden md:block"/>
           training programs
