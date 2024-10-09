@@ -1,5 +1,8 @@
-import { Button } from "../ui/button";
+"use client";
 
+import { logos } from "@/collections/partnerLogos";
+import { Button } from "../ui/button";
+import { CldImage } from "next-cloudinary";
 export default function PartnersSection() {
   return (
     <section className="h-full w-full  mt-28">
@@ -9,21 +12,33 @@ export default function PartnersSection() {
           <span className="text-green-400 uppercase">&#8226;</span>Partners
         </h2>
       </div>
-      <div className="flex space-x-12 overflow-hidden">
-        <div className="flex  space-x-12  motion-safe:animate-hortional-scroll-loop">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <div key={item} className="">
-              <p className="text-xl font-bold">Logoipsum</p>
+      <div className="flex space-x-16 overflow-hidden">
+        <div className="flex space-x-24 items-center   motion-safe:animate-hortional-scroll-loop">
+          {logos.map((item) => (
+            <div key={item.id} className="grid place-content-center">
+              <CldImage
+                height="200"
+                width="200"
+                src={item.logoRef}
+                alt={item.companyName}
+                className="object-cover max-w-none"
+              />
             </div>
           ))}
         </div>
         <div
-          className="flex  space-x-12  motion-safe:animate-hortional-scroll-loop"
+          className="flex space-x-24 items-center   motion-safe:animate-hortional-scroll-loop"
           aria-hidden="true"
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <div key={item} className="">
-              <p className="text-xl font-bold">Logoipsum</p>
+          {logos.map((item) => (
+            <div key={item.id} className="grid place-content-center">
+              <CldImage
+                height="200"
+                width="200"
+                src={item.logoRef}
+                alt={item.companyName}
+                className="object-cover max-w-none"
+              />
             </div>
           ))}
         </div>
