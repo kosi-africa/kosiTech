@@ -21,24 +21,29 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h1 className="text-center text-pretty uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem] -mt-40 px-4 z-0">
-          We are a
+        <motion.h1
+          initial={{ width: 0 }}
+          animate={{
+            width: "100%",
+          }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="text-center text-pretty uppercase font-bold text-4xl lg:text-6xl leading-[3rem] lg:leading-[4.5rem] overflow-hidden whitespace-pre-line md:whitespace-nowrap -mt-40 px-4 z-0"
+        >
+          We are a <br className="block md:hidden" />
           <motion.span
-            initial={{ opacity:0, x: -200, left: 0 }}
+            initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              x: 0,
-              left: "100",
               backgroundColor: "#22c55e",
               color: "#fff",
             }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="px-2"
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="px-2 mx-1 overflow-hidden whitespace-nowrap"
           >
             talent solution
           </motion.span>
-          to <br className="hidden md:block" /> the global tech demand
-        </h1>
+          to <br className="block" /> the global tech demand
+        </motion.h1>
       </motion.div>
     </section>
   );
