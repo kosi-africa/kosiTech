@@ -12,6 +12,6 @@ export const navLinks=[
     {
         id:3,
         linkName:'Services',
-        linkRef:'/our-work',
+        linkRef:'/services',
     },
 ]

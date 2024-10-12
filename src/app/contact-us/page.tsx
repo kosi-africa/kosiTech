@@ -23,7 +23,7 @@ export default function page() {
               <div className="space-y-4">
                 <p className="font-light text-gray-300 text-md">Phone</p>
                 <p className="text-gray-300 text-lg lg:text-xl">
-                  +254 712 817 268
+                  +254724 975 541
                 </p>
               </div>
             </div>

@@ -12,7 +12,7 @@ export const links=[
     {
         id:3,
         name:'Services',
-        linkRef:'/our-work',
+        linkRef:'/services',
     },
     
 ]
