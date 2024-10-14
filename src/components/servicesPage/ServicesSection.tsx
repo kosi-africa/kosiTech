@@ -1,11 +1,8 @@
-"use client";
-
 import { servicesCard } from "@/collections/ourWorkServices";
-import { CldImage } from "next-cloudinary";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function ServicesSection() {
   return (
-    // <section className="h-full w-full px-4  mt-20">
     <section className="h-full w-full container mx-auto text-white px-4  pt-20">
       <div className="max-w-7xl mx-auto grid place-content-center">
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
@@ -30,12 +27,13 @@ export default function ServicesSection() {
               <p className="">{service.description}</p>
             </div>
             <div className="w-full md:w-6/12">
-              <CldImage
-                src={service.imageRef}
-                height="200"
-                width="1900"
+              <CloudinaryImage
+                height={200}
+                width={1900}
                 sizes="100vw"
                 alt={service.title}
+                src={service.imageRef}
+                classNames=""
               />
             </div>
           </div>

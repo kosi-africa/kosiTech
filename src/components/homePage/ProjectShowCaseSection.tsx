@@ -1,7 +1,6 @@
-"use client";
 import { projects } from "@/collections/projectShowCase";
-import { CldImage } from "next-cloudinary";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function ProjectShowCaseSection() {
   return (
@@ -39,12 +38,13 @@ export default function ProjectShowCaseSection() {
               key={project.id}
               className=" bg-slate-100 h-full"
             >
-              <CldImage
-                src={project.ProjectImg}
-                height="200"
-                width="1900"
+              <CloudinaryImage
+                height={200}
+                width={1900}
                 sizes="100vw"
                 alt={project.projectName}
+                src={project.ProjectImg}
+                classNames=""
               />
             </motion.div>
           ))}

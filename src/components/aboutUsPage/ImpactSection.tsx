@@ -1,9 +1,9 @@
-"use client";
+
 import { ArrowUpRight, Calendar } from "lucide-react";
-import { CldImage } from "next-cloudinary";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client"
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function ImpactSection() {
   return (
@@ -88,12 +88,13 @@ export default function ImpactSection() {
             viewport={{ once: true }}
             className=""
           >
-            <CldImage
-              src="kosi-tech/about-us-hero-section/Africa_map_v6h7us"
-              height="400"
-              width="700"
+            <CloudinaryImage
+              height={400}
+              width={700}
+              sizes="100vw"
               alt="africa kenya map"
-              className="object-cover h-full w-full"
+              src="kosi-tech/about-us-hero-section/Africa_map_v6h7us"
+              classNames="object-cover h-full w-full"
             />
           </motion.div>
         </div>
