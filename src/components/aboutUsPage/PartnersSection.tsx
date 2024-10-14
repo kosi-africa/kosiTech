@@ -1,11 +1,19 @@
 "use client";
 
 import { logos } from "@/collections/partnerLogos";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import { CldImage } from "next-cloudinary";
+import { motion } from "framer-motion";
+
 export default function PartnersSection() {
   return (
-    <section className="h-full w-full  mt-28">
+    <motion.section
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="h-full w-full  mt-40 mb-40"
+    >
       <div className="max-w-7xl px-4 mx-auto">
         <h2 className="uppercase text-2xl text-center mb-8">
           {" "}
@@ -43,14 +51,14 @@ export default function PartnersSection() {
           ))}
         </div>
       </div>
-      <div className="bg-yellow-500 py-4 px-4 mt-12 flex flex-wrap gap-4 justify-center items-center">
+      {/* <div className="bg-yellow-500 py-4 px-4 mt-12 flex flex-wrap gap-4 justify-center items-center">
         <p className="text-white text-center italic">
           We are always happy to collaborate with others for greater impact!{" "}
         </p>
         <Button className="bg-white hover:bg-yellow-700 hover:text-white text-yellow-500 transition ease-in hover:scale-105 ">
           Become a Partner
         </Button>
-      </div>
-    </section>
+      </div> */}
+    </motion.section>
   );
 }
