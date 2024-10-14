@@ -1,10 +1,12 @@
 "use client";
-import { CldImage } from "next-cloudinary";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import CloudinaryImage from "../CloudinaryImage";
+
+
 export default function ReadyCTASection() {
   const pathname = usePathname();
   return (
@@ -15,13 +17,13 @@ export default function ReadyCTASection() {
       viewport={{ once: true }}
       className="h-[100vh] w-full grid place-content-center relative"
     >
-      <CldImage
-        src="kosi-tech/ReadyCTASection/readyCtaBg_ryilh6"
-        height="900"
-        width="1400"
+      <CloudinaryImage
+        height={900}
+        width={1400}
         sizes="100vw"
         alt="ready cta bg img"
-        className="object-cover h-screen w-screen absolute top-0 left-0 -z-20"
+        src="kosi-tech/ReadyCTASection/readyCtaBg_ryilh6"
+        classNames="object-cover h-screen w-screen absolute top-0 left-0 -z-20"
       />
       <div
         className={clsx(
