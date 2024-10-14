@@ -3,18 +3,30 @@ import { ArrowUpRight, Calendar } from "lucide-react";
 import { CldImage } from "next-cloudinary";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ImpactSection() {
   return (
     <section className="h-full w-full px-4 md:px-12 mt-28">
       <div className="max-w-7xl mx-auto ">
-        <h2 className="uppercase text-xl lg:text-2xl mb-8">
+        <motion.h2 
+          initial={{opacity:0,x:-100}}
+          whileInView={{opacity:1,x:0}}
+          transition={{duration:0.8,delay:0.5, ease:'easeInOut'}}
+          viewport={{once:true}}
+        className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
           <span className="text-green-400 uppercase">&#8226;</span>Impact
-        </h2>
-        {/* <div className="flex flex-col md:flex-row gap-8 justify-between"> */}
+        </motion.h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center">
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
             <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
               {" "}
               Reducing Brain Drain,
@@ -67,9 +79,15 @@ export default function ImpactSection() {
               </div>
             </div>
             <div className="c"></div>
-          </div>
+          </motion.div>
           {/* african image */}
-          <div className="">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className=""
+          >
             <CldImage
               src="kosi-tech/about-us-hero-section/Africa_map_v6h7us"
               height="400"
@@ -77,7 +95,7 @@ export default function ImpactSection() {
               alt="africa kenya map"
               className="object-cover h-full w-full"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

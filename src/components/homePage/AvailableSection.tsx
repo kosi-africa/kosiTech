@@ -2,12 +2,19 @@
 import { workCards } from "@/collections/availableWorkCards";
 import { CldImage } from "next-cloudinary";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function AvailableSection() {
   return (
     <section className="h-full w-full px-4 pt-28 bg-slate-100">
       <div className="container mx-auto">
-        <div className=" max-w-4xl mx-auto grid place-content-center">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className=" max-w-4xl mx-auto grid place-content-center"
+        >
           <h2 className="uppercase text-xl lg:text-2xl mb-8">
             {" "}
             <span className="text-amber-400 uppercase">&#8226;</span>Available
@@ -16,16 +23,22 @@ export default function AvailableSection() {
           <p className=" text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
             {" "}
             We blend{" "}
-            <span className="bg-amber-400 text-white px-1 mr-1">creativity with purpose,</span>
+            <span className="bg-amber-400 text-white px-1 mr-1">
+              creativity with purpose,
+            </span>
             creating visuals that are as functional as they are
             <br className="hidden lg:block" /> beautiful, ensuring that they
             contribute to
             <br className="hidden lg:block" /> the overall success of the brand.
           </p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-20">
           {workCards.map((work) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+              viewport={{ once: true }}
               key={work.id}
               className="rounded-xl bg-gradient-to-b from-slate-600 to-slate-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
             >
@@ -39,7 +52,7 @@ export default function AvailableSection() {
               />
               <h3 className="text-xl font-medium">{work.title}</h3>
               <p className="">{work.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

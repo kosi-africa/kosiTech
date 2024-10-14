@@ -1,15 +1,20 @@
 "use client";
 import { CldImage } from "next-cloudinary";
-import React from "react";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 export default function ReadyCTASection() {
   const pathname = usePathname();
   return (
-    <section className="h-[100vh] w-full grid place-content-center relative">
+    <motion.section
+      initial={{ opacity: 0, y: -100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="h-[100vh] w-full grid place-content-center relative"
+    >
       <CldImage
         src="kosi-tech/ReadyCTASection/readyCtaBg_ryilh6"
         height="900"
@@ -45,6 +50,6 @@ export default function ReadyCTASection() {
           Get Started
         </Link>
       </Button>
-    </section>
+    </motion.section>
   );
 }
