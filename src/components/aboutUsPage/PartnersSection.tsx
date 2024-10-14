@@ -1,9 +1,7 @@
-"use client";
-
-import { logos } from "@/collections/partnerLogos";
 // import { Button } from "../ui/button";
-import { CldImage } from "next-cloudinary";
-import { motion } from "framer-motion";
+import { logos } from "@/collections/partnerLogos";
+import * as motion from "framer-motion/client";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function PartnersSection() {
   return (
@@ -24,12 +22,13 @@ export default function PartnersSection() {
         <div className="flex space-x-24 items-center   motion-safe:animate-hortional-scroll-loop">
           {logos.map((item) => (
             <div key={item.id} className="grid place-content-center">
-              <CldImage
-                height="200"
-                width="200"
-                src={item.logoRef}
+              <CloudinaryImage
+                height={200}
+                width={200}
                 alt={item.companyName}
-                className="object-cover max-w-none"
+                sizes=""
+                src={item.logoRef}
+                classNames="object-cover max-w-none"
               />
             </div>
           ))}
@@ -40,12 +39,13 @@ export default function PartnersSection() {
         >
           {logos.map((item) => (
             <div key={item.id} className="grid place-content-center">
-              <CldImage
-                height="200"
-                width="200"
-                src={item.logoRef}
+              <CloudinaryImage
+                height={200}
+                width={200}
                 alt={item.companyName}
-                className="object-cover max-w-none"
+                sizes=""
+                src={item.logoRef}
+                classNames="object-cover max-w-none"
               />
             </div>
           ))}

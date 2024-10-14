@@ -1,8 +1,6 @@
-"use client";
 import { workCards } from "@/collections/availableWorkCards";
-import { CldImage } from "next-cloudinary";
-import React from "react";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function AvailableSection() {
   return (
@@ -42,14 +40,15 @@ export default function AvailableSection() {
               key={work.id}
               className="rounded-xl bg-gradient-to-b from-slate-600 to-slate-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
             >
-              <CldImage
-                src={work.imageRef}
-                height="200"
-                width="200"
+              <CloudinaryImage
+                height={200}
+                width={200}
                 sizes="100vw"
                 alt={work.title}
-                className="object-cover mx-auto h-40 w-40"
+                src={work.imageRef}
+                classNames="object-cover mx-auto h-40 w-40"
               />
+
               <h3 className="text-xl font-medium">{work.title}</h3>
               <p className="">{work.description}</p>
             </motion.div>

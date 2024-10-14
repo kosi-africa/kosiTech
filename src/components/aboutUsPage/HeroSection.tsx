@@ -1,18 +1,17 @@
-"use client";
-import { CldImage } from "next-cloudinary";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function heroSection() {
   return (
     <section className="h-screen w-full grid place-content-center relative">
-      <CldImage
-        src="kosi-tech/about-us-hero-section/about-us-hero-bg.jpg_lkoetj"
-        height="900"
-        width="1400"
+      <CloudinaryImage
+        height={900}
+        width={1400}
         sizes="100vw"
         priority
         alt="about us hero img bg"
-        className="object-cover absolute h-screen w-screen top-0 left-0 -z-20"
+        src="kosi-tech/about-us-hero-section/about-us-hero-bg.jpg_lkoetj"
+        classNames="object-cover absolute h-screen w-screen top-0 left-0 -z-20"
       />
       <div className="absolute top-0 left-0 -z-10 h-screen w-screen bg-gradient-to-b  from-slate-100 via-transparent to-slate-100"></div>
       <motion.div
