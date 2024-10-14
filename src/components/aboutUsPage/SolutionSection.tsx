@@ -1,6 +1,13 @@
+import * as motion from "framer-motion/client"
+
 export default function SolutionSection() {
   return (
-    <section className="h-full w-full px-4 mt-28">
+    <motion.section 
+    initial={{opacity:0,y:-100}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:0.8,delay:0.5, ease:'easeInOut'}}
+    viewport={{once:true}}
+    className="h-full w-full px-4 mt-28">
       <div className="max-w-4xl mx-auto grid place-content-center">
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
@@ -14,7 +21,12 @@ export default function SolutionSection() {
           and global clients
         </p>
         </div>
-        <div className=" max-w-6xl mx-auto mt-20">
+        <motion.div 
+          initial={{opacity:0,y:100}}
+          whileInView={{opacity:1,y:0}}
+          transition={{duration:0.8,delay:0.5, ease:'easeInOut'}}
+          viewport={{once:true}}
+        className=" max-w-6xl mx-auto mt-20">
             <div className="flex flex-col md:flex-row gap-8 justify-center">
                 <div className="border text-center px-4 py-20 space-y-4 ">
                     <p className="text-xl font-semibold">For Clients</p>
@@ -29,8 +41,8 @@ export default function SolutionSection() {
                     <p className="">Retention of talent, fostering local innovation and economic growth</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
       
-    </section>
+    </motion.section>
   );
 }
