@@ -20,7 +20,7 @@ export default function NavBar() {
     <>
       <nav
         className={clsx(
-          "hidden md:block",
+          "hidden md:block sticky top-0 z-20",
           pathName == "/contact-us"
             ? "bg-black text-white"
             : "bg-slate-100 text-black"
@@ -86,7 +86,7 @@ export default function NavBar() {
       {/* mobile navigation section */}
       <nav
         className={clsx(
-          "flex justify-between items-center pt-4 px-4 md:hidden",
+          "flex justify-between items-center pt-4 pb-4 px-4 sticky top-0 z-20 md:hidden",
           pathName == "/contact-us"
             ? "bg-black text-white"
             : "bg-slate-100 text-black"
