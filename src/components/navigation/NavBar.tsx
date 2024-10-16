@@ -12,6 +12,7 @@ import {
 } from "../ui/navigation-menu";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 import { MenuIcon } from "lucide-react";
+import CloudinaryImage from "../CloudinaryImage";
 
 export default function NavBar() {
   const pathName = usePathname();
@@ -38,18 +39,17 @@ export default function NavBar() {
                 <NavigationMenuList className="flex gap-4 justify-between items-center text-sm">
                   <NavigationMenuItem>
                     <Link href="/">
-                      <CldImage
+                      <CloudinaryImage
+                        height={150}
+                        width={150}
+                        sizes="100vw"
+                        alt="KosiTech Logo"
                         src={
                           pathName == "/contact-us"
                             ? "kosi-tech/logos/Kosi_tech_nav_logo_2_u8zwsu"
                             : "kosi-tech/logos/kosiTech_nav_logo_ytqvv6"
                         }
-                        height="150"
-                        width="150"
-                        sizes="100vw"
-                        priority
-                        alt="KosiTech logo"
-                        className="object-cover"
+                        classNames="object-cover"
                       />
                     </Link>
                   </NavigationMenuItem>
