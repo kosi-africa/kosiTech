@@ -1,29 +1,29 @@
-
 import { ArrowUpRight, Calendar } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import * as motion from "framer-motion/client"
+import * as motion from "framer-motion/client";
 import CloudinaryImage from "../CloudinaryImage";
 
 export default function ImpactSection() {
   return (
     <section className="h-full w-full px-4 md:px-12 mt-28">
       <div className="max-w-7xl mx-auto ">
-        <motion.h2 
-          initial={{opacity:0,x:-100}}
-          whileInView={{opacity:1,x:0}}
-          transition={{duration:0.8,delay:0.5, ease:'easeInOut'}}
-          viewport={{once:true}}
-        className="uppercase text-xl lg:text-2xl mb-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="uppercase text-xl lg:text-2xl mb-8"
+        >
           {" "}
-          <span className="text-green-400 uppercase">&#8226;</span>Impact
+          <span className="text-green-400 uppercase pr-2">&#8226;</span>Impact
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center">
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -82,9 +82,9 @@ export default function ImpactSection() {
           </motion.div>
           {/* african image */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             viewport={{ once: true }}
             className=""
           >

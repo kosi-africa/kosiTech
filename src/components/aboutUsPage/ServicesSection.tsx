@@ -4,15 +4,15 @@ export default function ServicesSection() {
   return (
     <section className="h-full w-full px-4 mt-28">
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         viewport={{ once: true }}
         className=" text-center grid place-content-center"
       >
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
-          <span className="text-yellow-400 uppercase">&#8226;</span>Services
+          <span className="text-yellow-400 uppercase pr-2">&#8226;</span>Services
         </h2>
         <div className="space-y-4">
           <p className="text-2xl lg:text-4xl font-light">BRANDING</p>

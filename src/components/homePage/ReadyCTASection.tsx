@@ -11,9 +11,9 @@ export default function ReadyCTASection() {
   const pathname = usePathname();
   return (
     <motion.section
-      initial={{ opacity: 0, y: -100 }}
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.8, delay: 0.0, ease: "easeInOut" }}
       viewport={{ once: true }}
       className="h-[100vh] w-full grid place-content-center relative"
     >

@@ -7,7 +7,7 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto grid place-content-center">
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
-          <span className="text-yellow-400 uppercase">&#8226;</span>Services
+          <span className="text-yellow-400 uppercase pr-2">&#8226;</span>Services
         </h2>
         <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
