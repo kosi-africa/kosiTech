@@ -7,15 +7,15 @@ export default function ProjectShowCaseSection() {
     <section className="h-full w-full px-4 ">
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.8, delay: 0.0, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto grid place-content-center mt-28"
         >
           <h2 className="uppercase text-xl lg:text-2xl mb-8">
             {" "}
-            <span className="text-green-400 uppercase">&#8226;</span>Project
+            <span className="text-green-400 uppercase pr-2">&#8226;</span>Project
             Showcase
           </h2>
           <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">

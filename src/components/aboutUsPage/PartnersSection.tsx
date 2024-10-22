@@ -6,16 +6,16 @@ import CloudinaryImage from "../CloudinaryImage";
 export default function PartnersSection() {
   return (
     <motion.section
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay: 0.8, ease: "easeInOut" }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       viewport={{ once: true }}
       className="h-full w-full  mt-40 mb-40"
     >
       <div className="max-w-7xl px-4 mx-auto">
         <h2 className="uppercase text-2xl text-center mb-8">
           {" "}
-          <span className="text-green-400 uppercase">&#8226;</span>Partners
+          <span className="text-green-400 uppercase pr-2">&#8226;</span>Partners
         </h2>
       </div>
       <div className="flex space-x-16 overflow-hidden">

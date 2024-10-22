@@ -23,7 +23,7 @@ export default function NavBar() {
           "hidden md:block sticky top-0 z-20",
           pathName == "/contact-us"
             ? "bg-black text-white"
-            : "bg-slate-100 text-black"
+            : "bg-white text-black"
         )}
       >
         <section

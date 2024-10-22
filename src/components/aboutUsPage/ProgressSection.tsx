@@ -5,21 +5,21 @@ export default function ProgressSection() {
   return (
     <section className="h-full w-full px-4 mt-28">
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
         className=" text-center grid place-content-center "
       >
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
-          <span className="text-red-800 uppercase">&#8226;</span>Progress
+          <span className="text-red-800 uppercase pr-2">&#8226;</span>Progress
         </h2>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center md:justify-between gap-8"
       >
@@ -45,7 +45,7 @@ export default function ProgressSection() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="text-center grid place-content-center mt-20"
       >

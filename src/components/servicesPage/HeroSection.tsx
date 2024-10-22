@@ -13,9 +13,9 @@ export default function HeroSection() {
         src="kosi-tech/about-us-hero-section/our-work-hero-bg.jpg_aximx0"
         classNames="object-cover h-screen w-screen absolute top-0 left-0 -z-20"
       />
-      <div className="absolute top-0 left-0 -z-10 h-screen w-screen bg-gradient-to-b  from-slate-100 via-transparent to-slate-100"></div>
+      <div className="absolute top-0 left-0 -z-10 h-screen w-screen bg-gradient-to-b  from-white via-transparent to-white"></div>
       <motion.div
-        initial={{ opacity: 0, y: -500 }}
+        initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="px-2"
@@ -36,7 +36,7 @@ export default function HeroSection() {
               backgroundColor: "#14b8a6",
               color: "#fff",
             }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
             className="px-2 mx-1 "
           >
             INNOVATIVE & SUSTAINABLE
