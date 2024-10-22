@@ -24,8 +24,8 @@ import {
 import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
 import { insertContactInformation } from "@/actions/ContactInformationAction";
-// import { Resend } from "resend"; 
-// import EmailTemplate from "../emails/EmailTemplate";
+import { EmailNotification } from "@/actions/EmailNotification";
+
 const contactFormSchema = z.object({
   name: z
     .string()
@@ -47,27 +47,15 @@ export default function ContactForm() {
       message: "",
     },
   });
-  // const resend = new Resend(process.env.RESEND_API_KEY);
 
   async function onSubmit(contactInforData: z.infer<typeof contactFormSchema>) {
     const dbResponse = await insertContactInformation(contactInforData);
     if (dbResponse.length > 0) {
       toast.success("Success, details have been submit");
-      // try {
-      //   const { data, error } = await resend.emails.send({
-      //     from: "",
-      //     to: [""],
-      //     subject: "TEST SUBJECT",
-      //     react: EmailTemplate({ name: contactInforData.name }),
-      //   });
-      //   if (error) {
-      //     toast.warning("Resend 500 server error, {error}");
-      //   }
-      //   if (data) {
-      //     toast.success("Check your email");
-      //   }
-      // } catch (error) {
-      //   toast.error(`Resend Error; ${error}`);
+      EmailNotification()
+      // const data = await EmailNotification();
+      // if (data) {
+      //   toast.info("please check your inbox for next steps");
       // }
       form.reset();
     } else toast.error("Error, Please try again later");
