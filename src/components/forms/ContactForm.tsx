@@ -52,7 +52,7 @@ export default function ContactForm() {
     const dbResponse = await insertContactInformation(contactInforData);
     if (dbResponse.length > 0) {
       toast.success("Success, details have been submit");
-      EmailNotification()
+      EmailNotification(contactInforData)
       // const data = await EmailNotification();
       // if (data) {
       //   toast.info("please check your inbox for next steps");
