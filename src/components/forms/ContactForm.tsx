@@ -123,7 +123,7 @@ export default function ContactForm() {
                   </FormControl>
                   <SelectContent>
                     <SelectItem value="Website Design">
-                      Website Deisgn
+                      Website Design
                     </SelectItem>
                     <SelectItem value="Logo Design">Logo Design</SelectItem>
                     <SelectItem value="Website Development">

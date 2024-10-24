@@ -1,6 +1,9 @@
-import { workCards } from "@/collections/availableWorkCards";
+import { workCards } from "@/staticData/availableWorkCards";
 import * as motion from "framer-motion/client";
 import CloudinaryImage from "../CloudinaryImage";
+import { Button } from "../ui/button";
+import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 export default function AvailableSection() {
   return (
@@ -50,7 +53,18 @@ export default function AvailableSection() {
               />
 
               <h3 className="text-xl font-medium">{work.title}</h3>
-              <p className="">{work.description}</p>
+              <div className="flex items-center justify-between gap-4">
+                <p className="w-full md:max-w-lg">{work.description}</p>
+                <Button
+                  variant="outline"
+                  asChild
+                  className="bg-transparent hover:bg-white "
+                >
+                  <Link href="/contact-us" className=" ">
+                    <MoveRight className="w-6 h-6 text-black bg-white rounded-md px-1 " />
+                  </Link>
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>

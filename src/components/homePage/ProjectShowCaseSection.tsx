@@ -1,4 +1,4 @@
-import { projects } from "@/collections/projectShowCase";
+import { projects } from "@/staticData/projectShowCase";
 import * as motion from "framer-motion/client";
 import CloudinaryImage from "../CloudinaryImage";
 
@@ -15,8 +15,8 @@ export default function ProjectShowCaseSection() {
         >
           <h2 className="uppercase text-xl lg:text-2xl mb-8">
             {" "}
-            <span className="text-green-400 uppercase pr-2">&#8226;</span>Project
-            Showcase
+            <span className="text-green-400 uppercase pr-2">&#8226;</span>
+            Project Showcase
           </h2>
           <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
             {" "}
