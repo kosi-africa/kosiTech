@@ -1,5 +1,5 @@
 // import { Button } from "../ui/button";
-import { logos } from "@/collections/partnerLogos";
+import { logos } from "@/staticData/partnerLogos";
 import * as motion from "framer-motion/client";
 import CloudinaryImage from "../CloudinaryImage";
 

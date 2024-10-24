@@ -1,4 +1,4 @@
-import { servicesCard } from "@/collections/ourWorkServices";
+import { servicesCard } from "@/staticData/ourWorkServices";
 import CloudinaryImage from "../CloudinaryImage";
 
 export default function ServicesSection() {
@@ -7,7 +7,8 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto grid place-content-center">
         <h2 className="uppercase text-xl lg:text-2xl mb-8">
           {" "}
-          <span className="text-yellow-400 uppercase pr-2">&#8226;</span>Services
+          <span className="text-yellow-400 uppercase pr-2">&#8226;</span>
+          Services
         </h2>
         <p className="text-3xl lg:text-5xl leading-[2.5rem] lg:leading-[3.5rem]">
           {" "}
@@ -19,12 +20,12 @@ export default function ServicesSection() {
         {servicesCard.map((service) => (
           <div
             key={service.id}
-            className="flex flex-col md:flex-row gap-8 py-4 px-8 justify-between items-center  bg-gray-700 text-white sticky top-0"
+            className="flex flex-col md:flex-row gap-8 py-4 px-8 justify-between items-center  bg-zinc-800 text-white sticky top-0"
           >
             <div className="flex flex-col w-full md:w-5/12">
               <p className="text-lg">{service.number}.</p>
               <p className="text-2xl font-semibold">{service.title}</p>
-              <p className="">{service.description}</p>
+              <p className="mt-8">{service.description}</p>
             </div>
             <div className="w-full md:w-6/12">
               <CloudinaryImage

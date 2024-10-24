@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/collections/footerLinks";
+import { links } from "@/staticData/footerLinks";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -36,12 +36,15 @@ export default function FooterSection() {
 
         <section className="flex flex-wrap justify-center md:justify-between items-center">
           <div className="c">
-            <Button asChild className="bg-black hover:bg-slate-900  text-white w-32 mx-auto my-8 z-0 transition ease-in hover:scale-105">
-            <Link href="/contact-us">
-              <span className="bg-white text-black px-1 mx-1 rounded-md">
-                &#8594;
-              </span>
-              Get Started
+            <Button
+              asChild
+              className="bg-black hover:bg-slate-900  text-white w-32 mx-auto my-8 z-0 transition ease-in hover:scale-105"
+            >
+              <Link href="/contact-us">
+                <span className="bg-white text-black px-1 mx-1 rounded-md">
+                  &#8594;
+                </span>
+                Get Started
               </Link>
             </Button>
           </div>

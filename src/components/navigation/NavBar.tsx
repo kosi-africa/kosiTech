@@ -1,5 +1,5 @@
 "use client";
-import { navLinks } from "@/collections/navBarLinks";
+import { navLinks } from "@/staticData/navBarLinks";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { Button } from "../ui/button";
