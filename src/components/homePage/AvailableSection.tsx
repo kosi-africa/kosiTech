@@ -41,7 +41,7 @@ export default function AvailableSection() {
               transition={{ duration: 0.8, delay: 0.0, ease: "easeInOut" }}
               viewport={{ once: true }}
               key={work.id}
-              className="rounded-xl bg-gradient-to-b from-slate-600 to-slate-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
+              className="rounded-xl bg-gradient-to-b from-zinc-600 to-zinc-900 h-full px-8 py-16 text-white flex flex-col justify-end space-y-8 "
             >
               <CloudinaryImage
                 height={200}
