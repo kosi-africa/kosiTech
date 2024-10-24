@@ -9,7 +9,7 @@ export const projects=[
         id:2,
         projectName:'project 2',
         ProjectUrl:'',
-        ProjectImg:'kosi-tech/project-showcase/project-2_yaqgqm',
+        ProjectImg:'kosi-tech/project-showcase/projectShowCase5_j8jkop',
     },
     {
         id:3,
