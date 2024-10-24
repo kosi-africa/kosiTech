@@ -6,7 +6,7 @@ export default function page() {
   return (
     <main className="">
       <HeroSection />
-      <section className="bg-black">
+      <section className="bg-black/90">
         <ServicesSection />
       </section>
       <ReadyCTASection />
