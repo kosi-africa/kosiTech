@@ -17,7 +17,7 @@ export default function page() {
               <div className="space-y-4">
                 <p className="font-light text-gray-300 text-md">Email</p>
                 <p className="text-gray-300 text-lg lg:text-xl">
-                  team@kositech.co
+                  kositech@kosiafrica.org
                 </p>
               </div>
               <div className="space-y-4">
