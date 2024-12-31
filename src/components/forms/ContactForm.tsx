@@ -25,6 +25,7 @@ import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
 import { insertContactInformation } from "@/actions/ContactInformationAction";
 import { EmailNotification } from "@/actions/EmailNotification";
+import GoogleMeetupButton from "../ui/googleMeetupButton";
 
 const contactFormSchema = z.object({
   name: z
@@ -169,13 +170,14 @@ export default function ContactForm() {
       <div className="flex justify-end items-center w-full  -mt-10 -ml-2 md:-mt-10 md:ml-0">
         <div className="flex justify-center items-center">
           <p className="px-2">Or</p>
-          <Button
+          {/* <Button
             variant="ghost"
             className=" border text-white hover:bg-slate-200 transition easein hover:scale-105 "
             disabled
           >
             Book a Meeting
-          </Button>
+          </Button> */}
+            <GoogleMeetupButton/>
         </div>
       </div>
     </section>
