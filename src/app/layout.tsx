@@ -5,6 +5,7 @@ import FooterSection from "@/components/footer/FooterSection";
 import NavBar from "@/components/navigation/NavBar";
 import { getCldOgImageUrl } from "next-cloudinary";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 
 const geistSans = localFont({
@@ -49,6 +50,7 @@ export default function RootLayout({
         {children}
         <Toaster position='top-right'/>
         <FooterSection />
+        <Script src="https://calendar.google.com/calendar/scheduling-button-script.js" async/>
       </body>
     </html>
   );
