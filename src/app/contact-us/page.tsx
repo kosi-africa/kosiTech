@@ -11,7 +11,7 @@ export default function page() {
       >
         <div className="flex flex-col lg:flex-row justify-between items-center gap-28">
           <div className="w-full lg:w-3/6">
-            <h1 className="text-3xl lg:text-5xl">Conatact Us</h1>
+            <h1 className="text-3xl lg:text-5xl">Contact Us</h1>
             {/* emaail & phone divs */}
             <div className="flex flex-row md:flex-row justify-between items-center gap-8 mt-8">
               <div className="space-y-4">
